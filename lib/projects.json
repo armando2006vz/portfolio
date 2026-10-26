@@ -1,0 +1,74 @@
+[
+    {
+        "title": "CAL FIRE Data Analysis",
+        "year": 2025,
+        "image": "../images/wildfire-map.png",
+        "description": "Analyzed California wildfire data to explore patterns and trends."
+    },
+    {
+        "title": "NYPD Civilian Complaint Visualization",
+        "year": 2026,
+        "image": "../images/nypdanalysis.png",
+        "description": "Analyzed police complaint records and visualized trends in complaints over time."
+    },
+    {
+        "title": "Healthcare No Show Analysis",
+        "year": 2024,
+        "image": "../images/healthcarenoshowhotspotmap.png",
+        "description": "Analyzed healthcare no-show data to identify patterns and improve attendance."
+    },
+    {
+        "title": "Hawaii Business Reviews Analysis",
+        "year": 2023,
+        "image": "../images/hawaiiplot.png",
+        "description": "Analyzed business reviews in Hawaii to understand customer sentiment and trends."
+    },
+    {
+        "title": "Eveniet voluptate molestias velit!",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Deserunt fuga doloribus facere. Quod repellat dicta error, reprehenderit nemo inventore quis, magni sint eos qui excepturi velit enim aspernatur dolores quidem laboriosam laborum accusamus architecto fugit quae voluptates amet?"
+    },
+    {
+        "title": "Natus praesentium earum delectus?",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Quasi corporis inventore dicta sunt rem, modi, iste maxime eaque quidem maiores sed deleniti voluptates commodi soluta molestiae. Impedit sunt consequatur magni sed labore distinctio pariatur quasi placeat sit accusamus!"
+    },
+    {
+        "title": "Quia velit ipsa similique!",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Ex ad est nihil perferendis dicta dolorum accusamus, quidem deserunt maxime magnam illo fugiat quia recusandae tempore possimus! Accusantium iste nemo animi consequatur iusto illo maxime rem consequuntur, quas error."
+    },
+    {
+        "title": "Nemo ratione reiciendis aspernatur?",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Nulla blanditiis voluptas consequuntur exercitationem cupiditate atque, a iusto perspiciatis ut soluta eaque deleniti laudantium reiciendis quas repellendus. Non cumque eveniet assumenda voluptates fuga? Eius, molestiae omnis! Optio, aliquid nobis."
+    },
+    {
+        "title": "Non id reiciendis ducimus.",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Impedit, mollitia accusamus quam sunt at voluptas similique pariatur ut. Cum ipsam sunt, animi molestiae dicta corrupti quidem at cupiditate est quaerat, ad voluptas. Repudiandae libero cupiditate animi eveniet debitis?"
+    },
+    {
+        "title": "Labore vitae accusamus est!",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Eius, tempora provident beatae illo error dolorem porro modi impedit nulla! Aut similique sit, rem tempore cumque laboriosam distinctio optio cupiditate id dolore libero sed officiis deserunt quisquam excepturi ullam?"
+    },
+    {
+        "title": "Est et iusto quod.",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Molestiae ut, reiciendis perspiciatis iure repellat, nobis voluptatum necessitatibus ipsam nam fugit eum illo. Animi tempora consequatur minus assumenda dolore. Explicabo inventore dolores, possimus omnis voluptatem tenetur eos aperiam incidunt."
+    },
+    {
+        "title": "Atque, laboriosam? Aliquid, sed?",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Natus magni id nihil, ducimus quod excepturi quia dolorem ut inventore, ipsa facilis aliquid quaerat sequi eligendi dicta, corrupti labore aut reiciendis tempora explicabo molestias fugiat ad esse? Laudantium, voluptatum."
+    }
+]
