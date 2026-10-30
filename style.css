@@ -160,3 +160,69 @@ time {
   margin: 0;
   font-size: 120%;
 }
+
+.projectyear {
+  color: grey;
+  font-family: Bakerville;
+  font-variant-numeric: oldstyle-nums;
+}
+
+#projectpieplot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.legend {
+display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid;
+  padding: 1em;
+  margin-block: 1em;
+  list-style: none;
+  flex: 1;
+  min-width: 0;
+
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+
+svg {
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+}
+
+svg path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
