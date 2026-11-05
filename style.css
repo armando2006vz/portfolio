@@ -247,3 +247,11 @@ svg path {
   font-size: 120%;
   font-weight: bold;
 }
+
+.gridlines line {
+  stroke: #aaaa; 
+}
+
+.gridlines path {
+  display: none;
+}
