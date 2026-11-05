@@ -43,7 +43,68 @@ function processCommits(data) {
     });
 }
 
+function renderCommitInfo(data, commits) {
+  // Create the dl element
+  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
+
+  // Add total LOC
+  dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+  dl.append('dd').text(data.length);
+
+  // Add total commits
+  dl.append('dt').text('Total commits');
+  dl.append('dd').text(commits.length);
+
+  const totalFiles = d3.groups(data, (d) => d.file).length;
+  dl.append('dt').text('Total files');
+  dl.append('dd').text(totalFiles);
+
+  const averageLineLength = d3.mean(data, (d) => d.length);
+  dl.append('dt').text('Average line length');
+  dl.append('dd').text(averageLineLength.toFixed(2));
+
+  const averageDepth = d3.mean(data, (d) => d.depth);
+  dl.append('dt').text('Average depth');
+  dl.append('dd').text(averageDepth.toFixed(2));
+}
+
+function renderScatterPlot(data, commits) {
+const width = 1000;
+const height = 600;
+
+const svg = d3
+  .select('#chart')
+  .append('svg')
+  .attr('viewBox', `0 0 ${width} ${height}`)
+  .style('overflow', 'visible');
+
+const xScale = d3
+  .scaleTime()
+  .domain(d3.extent(commits, (d) => d.datetime))
+  .range([0, width])
+  .nice();
+
+const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+
+const dots = svg.append('g').attr('class', 'dots');
+
+dots
+  .selectAll('circle')
+  .data(commits)
+  .join('circle')
+  .attr('cx', (d) => xScale(d.datetime))
+  .attr('cy', (d) => yScale(d.hourFrac))
+  .attr('r', 5)
+  .attr('fill', 'steelblue');
+}
+
+
+
 let data = await loadData();
 
 let commits = processCommits(data);
 console.log(commits);
+
+renderCommitInfo(data, commits);
+renderScatterPlot(data, commits);
+
