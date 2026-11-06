@@ -159,11 +159,12 @@ const rScale = d3
   .scaleSqrt() // Change only this line
   .domain([minLines, maxLines])
   .range([2, 30]);
-const dots = svg.append('g').attr('class', 'dots');
+  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+  const dots = svg.append('g').attr('class', 'dots');
 
 dots
   .selectAll('circle')
-  .data(commits)
+  .data(sortedCommits)
   .join('circle')
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
