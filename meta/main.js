@@ -89,6 +89,11 @@ function updateTooltipVisibility(isVisible) {
   const tooltip = document.getElementById('commit-tooltip');
   tooltip.hidden = !isVisible;
 }
+function updateTooltipPosition(event) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.style.left = `${event.clientX}px`;
+  tooltip.style.top = `${event.clientY}px`;
+}
 function renderScatterPlot(data, commits) {
 const width = 1000;
 const height = 600;
@@ -162,6 +167,7 @@ dots
   .on('mouseenter', (event, commit) => {
     renderTooltipContent(commit);
     updateTooltipVisibility(true);
+    updateTooltipPosition(event);
   })
   .on('mouseleave', () => {
     updateTooltipVisibility(false);
