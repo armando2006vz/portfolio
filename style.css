@@ -293,3 +293,9 @@ circle:hover {
   top: 1em;
   left: 1em;
 }
+#chart circle {
+  fill: steelblue;
+}
+#chart circle.selected {
+  fill: #ff6b6b;
+}
