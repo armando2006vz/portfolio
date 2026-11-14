@@ -17,11 +17,20 @@
         "image": "../images/healthcarenoshowhotspotmap.png",
         "description": "Analyzed healthcare no-show data to identify patterns and improve attendance."
     },
+
+{
+  "title": "Bikewatching",
+  "year": 2026,
+  "image": "../images/bikewatching.png",
+  "description": "Built an interactive map of Boston-area bike traffic using D3.js and Mapbox, visualizing station activity and arrival/departure patterns with a time filter.",
+  "url": "https://armando2006vz.github.io/bikewatching/"
+},
     {
         "title": "Hawaii Business Reviews Analysis",
         "year": 2023,
         "image": "../images/hawaiiplot.png",
-        "description": "Analyzed business reviews in Hawaii to understand customer sentiment and trends."
+        "description": "Analyzed business reviews in Hawaii to understand customer sentiment and trends.",
+        "url": "https://github.com/armando2006vz/hawaii-business-reviews-analysis"
     },
     {
         "title": "Eveniet voluptate molestias velit!",
