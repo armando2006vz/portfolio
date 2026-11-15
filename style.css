@@ -282,6 +282,9 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  @starting-style {
+    r: 0;
+  }
 }
 
 circle:hover {
@@ -298,4 +301,29 @@ circle:hover {
 }
 #chart circle.selected {
   fill: #ff6b6b;
+}
+
+.commit-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.commit-filters label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.commit-filters input {
+  flex: 1;
+}
+
+.commit-filters time {
+  align-self: flex-end;
+}
+
+#commit-progress {
+  accent-color: #4444
 }
