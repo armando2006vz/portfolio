@@ -318,6 +318,41 @@ function updateScatterPlot(data, commits) {
 
 
 
+function updateFileDisplay(filteredCommits) {
+  // after initializing filteredCommits
+  let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+let lines = filteredCommits.flatMap((d) => d.lines);
+let files = d3
+  .groups(lines, (d) => d.file)
+  .map(([name, lines]) => {
+    return { name, lines };
+  })
+  .sort((a, b) => b.lines.length - a.lines.length);
+
+let filesContainer = d3
+  .select('#files')
+  .selectAll('div')
+  .data(files, (d) => d.name)
+  .join(
+    // This code only runs when the div is initially rendered
+    (enter) =>
+      enter.append('div').call((div) => {
+        div.append('dt').append('code');
+        div.append('dd');
+      }),
+  );
+
+// This code updates the div info
+filesContainer.select('dt > code').text((d) => d.name);
+filesContainer
+  .select('dd')
+  .selectAll('div')
+  .data((d) => d.lines)
+  .join('div')
+  .attr('class', 'loc')
+.attr('style', (d) => `--color: ${colors(d.type)}`);
+}
 
 let data = await loadData();
 
@@ -333,6 +368,7 @@ function onTimeSliderChange() {
     });
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
 }
 
 let commits = processCommits(data);
@@ -350,6 +386,7 @@ let timeScale = d3
 
 let commitMaxTime = timeScale.invert(commitProgress);
 let filteredCommits = commits;
+
 
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
