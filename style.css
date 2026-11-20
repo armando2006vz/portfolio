@@ -383,3 +383,26 @@ circle:hover {
   bottom: auto;
   height: 50vh;
 }
+
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-2 > * {
+  flex: 1;
+}
+
+#files-plot {
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  max-height: 100vh;
+}
+
+#files-story {
+  position: relative;
+}
+
+
